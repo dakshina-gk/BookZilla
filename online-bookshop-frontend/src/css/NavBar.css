@@ -1,0 +1,174 @@
+/* NavBar.css */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 80px;
+}
+
+/* Logo section */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  color: #333;
+  text-decoration: none;
+  font-family: 'Arial', sans-serif;
+}
+
+.logo {
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+/* Search bar */
+.navbar-search {
+  flex-grow: 1;
+  max-width: 500px;
+  margin: 0 2rem;
+}
+
+.navbar-search input {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.navbar-search input:focus {
+  border-color: rgb(57, 159, 23);
+  box-shadow: 0 0 5px rgba(66, 133, 244, 0.5);
+}
+
+.navbar-search input::placeholder {
+  color: #888;
+}
+
+/* Navigation links */
+.navbar-links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.navbar-links a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.navbar-links a:hover {
+  color: rgb(57, 159, 23);
+  /* background-color: rgba(66, 133, 244, 0.1); */
+}
+
+/* ---------------- */
+/* Enhanced styling for the search bar in Navbar */
+.navbar-search {
+  display: flex;
+  flex: 1;
+  max-width: 600px;
+  margin: 0 20px;
+}
+
+.navbar-search form {
+  display: flex;
+  width: 100%;
+}
+
+.navbar-search input {
+  flex: 1;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px 0 0 4px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+
+}
+
+.navbar-search input:focus {
+  border-color: rgb(57, 159, 23);
+}
+
+.search-button {
+  padding: 10px 20px;
+  background-color:  rgb(57, 159, 23);
+  color: white;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.search-button:hover {
+  background-color: #39ca7f;
+  border-color: rgb(57, 159, 23);
+
+}
+
+/* Profile menu specific styling */
+.navbar-links .profile-menu {
+  display: flex;
+  align-items: center;
+  margin-left: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar-search {
+    max-width: 100%;
+    margin: 10px 0;
+  }
+  
+  .results-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+  }
+  
+  .navbar-logo {
+    margin-bottom: 1rem;
+  }
+  
+  .navbar-search {
+    width: 100%;
+    max-width: 100%;
+    margin: 1rem 0;
+  }
+  
+  .navbar-links {
+    width: 100%;
+    justify-content: center;
+    padding: 0.5rem 0;
+  }
+}

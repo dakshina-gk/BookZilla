@@ -1,0 +1,32 @@
+.book-detail {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: crimson;
+}
+
+.book-detail img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.book-detail h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.book-detail h2 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.book-detail p {
+  margin-bottom: 10px;
+}
+
+

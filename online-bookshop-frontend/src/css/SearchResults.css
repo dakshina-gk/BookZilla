@@ -1,0 +1,74 @@
+/* Styling for Search Results page */
+.search-results-container {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.search-results-container h2 {
+  margin-bottom: 30px;
+  color: #333;
+  font-size: 24px;
+}
+
+.loading, .error-message, .no-results {
+  padding: 20px;
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+}
+
+.error-message {
+  color: #d9534f;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 25px;
+}
+
+.book-card {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.book-card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.book-cover {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.book-info {
+  padding: 15px;
+}
+
+.book-title {
+  margin: 0 0 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.book-author {
+  margin: 0 0 10px;
+  color: #666;
+  font-size: 14px;
+}
+
+.book-price {
+  font-weight: bold;
+  color: #007bff;
+  margin: 0;
+}

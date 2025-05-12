@@ -1,0 +1,32 @@
+/* Home.css */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: rgb(254, 254, 254);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 15px 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.top-title{
+  margin-left: 20px;
+}
+ 
+
+/* .navbar a {
+  text-decoration: none;
+  color: #333333;
+  margin: 0 10px;
+  font-weight: 500;
+} */
+
+/* .navbar a:hover {
+  color: #d9230f;
+} */
+
