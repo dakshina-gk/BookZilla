@@ -10,7 +10,7 @@ exports.searchBooks = async (req, res) => {
       title: book.volumeInfo.title,
       author: book.volumeInfo.authors?.[0] || 'Unknown',
       description: book.volumeInfo.description || '',
-      price: Math.floor(Math.random() * 1000) + 100, // fake price
+      price: Math.floor(Math.random() * 1000) + 100, 
     }));
 
     res.json(books);
