@@ -7,13 +7,11 @@ function SearchResults() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   
-  // Get the query parameter from the URL
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
   const query = queryParams.get('q');
 
   useEffect(() => {
-    // Reset state when query changes
     setResults([]);
     setLoading(true);
     setError(null);
@@ -23,7 +21,6 @@ function SearchResults() {
       return;
     }
 
-    // Function to fetch search results
     const fetchSearchResults = async () => {
       try {
         const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${query}`);
@@ -37,7 +34,7 @@ function SearchResults() {
           id: item.id,
           title: item.volumeInfo.title || 'No Title',
           author: item.volumeInfo.authors ? item.volumeInfo.authors.join(', ') : 'Unknown Author',
-          price: (Math.random() * 20 + 5), // Random price for example purposes
+          price: (Math.random() * 20 + 5), 
           coverImage: item.volumeInfo.imageLinks?.thumbnail || 'https://via.placeholder.com/150'
         }));
         
