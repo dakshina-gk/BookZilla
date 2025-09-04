@@ -24,7 +24,6 @@ const Payment = ({ cartItems, totalAmount, onClose }) => {
       [name]: value
     });
     
-    // Clear error when field is edited
     if (errors[name]) {
       setErrors({
         ...errors,
