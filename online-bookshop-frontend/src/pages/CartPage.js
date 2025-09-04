@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import Payment from './Payment'; // Import the new Payment component
+import Payment from './Payment'; 
 import '../css/Cartpage.css';
 
 const Cart = () => {
@@ -8,7 +8,7 @@ const Cart = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [checkoutLoading, setCheckoutLoading] = useState(false);
   const [checkoutError, setCheckoutError] = useState(null);
-  const [showPayment, setShowPayment] = useState(false); // New state to control payment page visibility
+  const [showPayment, setShowPayment] = useState(false); 
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -62,11 +62,9 @@ const Cart = () => {
 
     setCheckoutError(null);
     
-    // Show payment page instead of navigating directly
     setShowPayment(true);
   };
 
-  // Function to close payment overlay
   const closePayment = () => {
     setShowPayment(false);
   };
@@ -146,7 +144,6 @@ const Cart = () => {
         </>
       )}
       
-      {/* Payment overlay - shown when checkout button is clicked */}
       {showPayment && (
         <Payment 
           cartItems={cartItems} 
